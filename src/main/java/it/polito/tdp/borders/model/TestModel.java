@@ -20,6 +20,17 @@ public class TestModel {
 //		for (Country country : stats.keySet())
 //			System.out.format("%s %d\n", country, stats.get(country));		
 		
+		model.setGraph(1816);
+		System.out.println(model.iterativeVisit(model.getcIdMap().get(210)));
+		System.out.println(model.breadthVisit(model.getcIdMap().get(210)));
+		System.out.println("\n");
+		System.out.println(model.recursiveVisit(model.getcIdMap().get(210)));
+		System.out.println(model.depthVisit(model.getcIdMap().get(210)));
+		
+		System.out.println("\n");
+		model.setGraph(2016);
+		System.out.println(model.getConnectedComponents());
+		
 	}
 
 }
